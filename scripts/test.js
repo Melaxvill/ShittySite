@@ -1,0 +1,24 @@
+module.exports = async function(context, commands){
+ await commands.measure.start('Open main page');
+ await commands.navigate('https://hard-cool.github.io/CSLevel2.github.io/');
+ await commands.measure.stop();
+ await commands.wait.byTime(1000);
+ await commands.measure.start('Open 2048 page');
+ await commands.click.byPartialLinkText('Build Your Own 2048');
+ await commands.measure.stop();
+ await commands.wait.byTime(1000);
+ await commands.navigation.back();
+ await commands.measure.start('Open Website Performance Optimization page');
+ await commands.click.byPartialLinkText('Website Performance Optimization');
+ await commands.measure.stop();
+ await commands.wait.byTime(1000);
+ await commands.navigation.back();
+ await commands.measure.start('Open Mobile Web Development page');
+ await commands.click.byPartialLinkText('Mobile Web Development');
+ await commands.measure.stop();
+ await commands.wait.byTime(1000);
+ await commands.navigation.back();
+ await commands.measure.start('Open Cameron Pizzeria page');
+ await commands.click.byPartialLinkText('s Pizzeria');
+ await commands.measure.stop();
+ };
